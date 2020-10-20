@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const { json } = require('body-parser');
 const mongoose = require('mongoose');
 
+const port = process.env.PORT || 3000;
 var publicPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
@@ -22,6 +23,6 @@ mongoose.connect('mongodb://max:G0tqCEpDmZpYjjoj@cluster0-shard-00-00.v3zte.mong
   .then(() =>{ console.log('connected to database'); })
   .catch((err) =>{ console.log('connection failed' + err); });
 
-app.listen(3000, ()=> {
-    console.log('server is running on port 3000');
+app.listen(port, ()=> {
+    console.log('server is running on port '+port);
 })

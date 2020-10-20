@@ -2,7 +2,7 @@ console.log('search client js');
 
 const searchForm = document.getElementById('frm-form');
 const fetchRecods = (accountNumber, callback) => {
-    fetch("http://localhost:3000/searchRecords?ac=" + accountNumber)
+    fetch("/searchRecords?ac=" + accountNumber)
         .then((response) => {
             response.json()
                 .then((data) => {callback(undefined, data)})

@@ -2,7 +2,7 @@
 console.log('registeer client js');
 
 const generateAccount = (userdata, callback) => {
-    fetch('http://localhost:3000/generateAccount', {
+    fetch('/generateAccount', {
         method: "post",
         body:  JSON.stringify(userdata),
         headers: { 'Content-type': 'application/json' },
