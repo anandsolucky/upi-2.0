@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>UPI 2.0</title>
+        <link rel='stylesheet' type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+        <link rel='stylesheet' type="text/css" href="/css/style.css" />
+    </head>
+    <body id='body'>
+        <div class="container">
+            <div id='innerDiv' class="jumbotron">
+                <h1>UPI 2.0</h1>
+                <br><br>
+                {{>header}}
+                <br><br>
+                <form id="frm-form" method="GET">
+                    <div class="form-group">
+                        <label for="Enter your account number">Account Number</label>
+                        <input class="form-control" id="ac-input" placeholder="eg. 1234" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <br>
+            </div>
+        </div>
+        
+        <script src="/js/search-client.js"></script>    
+    </body>
+</html>
